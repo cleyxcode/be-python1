@@ -1,16 +1,14 @@
 {
-    "vercel" : 2,
-    "builds": [
-        {
-            "src": "main.py",
-            "use": "@vercel/pyhton"
-        
-        }
-    ],
-    "routes": [
-        {
-            "src": "/(.*)",
-            "dest": "app.py"
-        }
-    ]
+  "builds": [
+    {
+      "src": "main.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/main.py"
+    }
+  ]
 }
