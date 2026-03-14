@@ -1,0 +1,16 @@
+{
+    "vercel" : 2,
+    "builds": [
+        {
+            "src": "main.py",
+            "use": "@vercel/pyhton"
+        
+        }
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "app.py"
+        }
+    ]
+}
